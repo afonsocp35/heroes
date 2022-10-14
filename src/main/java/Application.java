@@ -1,5 +1,13 @@
+import ldts.Game;
+
+import java.io.IOException;
+
 public class Application {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        try {
+            new Game(60, 30).run();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

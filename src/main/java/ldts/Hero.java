@@ -5,7 +5,7 @@ import com.googlecode.lanterna.TerminalPosition;
 import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.graphics.TextGraphics;
 
-public class Hero extends Element{
+public class Hero extends Element {
     public Hero(int x, int y) {
         super(x, y);
     }
@@ -15,7 +15,7 @@ public class Hero extends Element{
     }
 
     public void setPosition(Position position) {
-
+        this.position = position;
     }
 
     public Position moveUp() {
@@ -23,7 +23,7 @@ public class Hero extends Element{
     }
 
     public Position moveRight() {
-        return new Position(position.getX() + 1, position.getY() - 1);
+        return new Position(position.getX() + 1, position.getY());
     }
 
     public Position moveDown() {
@@ -31,7 +31,7 @@ public class Hero extends Element{
     }
 
     public Position moveLeft() {
-        return new Position(position.getX() - 1 , position.getY());
+        return new Position(position.getX() - 1, position.getY());
     }
 
     public void draw(TextGraphics graphics) {
